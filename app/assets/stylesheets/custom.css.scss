@@ -1,0 +1,54 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@media (min-width:765px){
+  .ctl-fixed-width {
+  	width:100px !important;
+  	}
+  }
+
+.carousel-inner img {
+  	width:100%;
+  	max-height:400px !important;
+  }
+  
+  @media (min-width:1000px){
+  	.large {
+  		font-size:4em;
+  	}
+  
+  	.col-md-4 {
+  		display:block;
+  		text-align:center;
+  		margin-bottom:10px;
+  	}
+  	
+  	#slogan {
+  		text-align:center;
+  		font-size:1.5em;
+  		margin-bottom:10px;
+  	}
+  	
+  	button {
+  		background-color:white;
+  		border:none;
+  	}
+  }
+  
+  @media (max-width:999px){
+  	.large {
+  		font-size:3em;
+  	}
+  	
+  	.col-md-4 {
+  		display:block;
+  		text-align:center;
+  	}
+  	
+  	#slogan {
+  		text-align:center;
+  		font-size:1em;
+  		margin-bottom:10px;
+  	}
+  
+  }

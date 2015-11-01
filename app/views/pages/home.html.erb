@@ -1,0 +1,119 @@
+ <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+	<ol class="carousel-indicators">
+    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    	<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    	<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  	</ol>
+
+  <!-- Wrapper for slides -->
+  	<div class="carousel-inner" role="listbox">
+    	<div class="item active">
+      	<%= image_tag "food.jpg" %>
+      		<div class="carousel-caption">
+      			<h3>Let Us Help You:</h3>
+        		<p>Find Your Food</p>
+      		</div>
+    	</div>
+    	<div class="item">
+      	<%= image_tag "community.jpg" %>
+      		<div class="carousel-caption">
+      			<h3>Let Us Help You:</h3>
+        		<p>Engage Your Community</p>
+      		</div>
+    	</div>
+    	<div class="item">
+      	<%= image_tag "health.jpg" %>
+      		<div class="carousel-caption">
+      			<h3>Let Us Help You:</h3>
+        		<p>Improve Your Health</p>
+      		</div>
+    	</div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</br>
+
+
+	<div id="slogan">Shop, Live, & Thrive in your own Backyard!</div>
+	<div class="row">
+  		<div class="col-md-4"><button data-toggle="modal" data-target="#shopModal"><span class="glyphicon glyphicon-shopping-cart large"></button></div>
+  		<div class="col-md-4"><button data-toggle="modal" data-target="#liveModal"><span class="glyphicon glyphicon-home large"></button></div>
+  		<div class="col-md-4"><button data-toggle="modal" data-target="#healthModal"><span class="glyphicon glyphicon-heart large"><button></div>
+	</div>
+
+<div class="modal" id="shopModal">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Find Healthy & Affordable Food in Your City</h4>
+		</div>
+		<div class="modal-body">
+			<p>We can help you find:
+			<ul class="list-group">
+				<li class="list-group-item">Grocery Stores</li>
+				<li class="list-group-item">Farmers' Markets</li>
+				<li class="list-group-item">Local Distributors</li>
+			</ul>
+			<p>All to help you create healthy meals without breaking the budget!</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="modal" id="liveModal">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Connect with Others in Your Community</h4>
+		</div>
+		<div class="modal-body">
+			<p>We can connect you with others to:
+			<ul class="list-group">
+				<li class="list-group-item">Discuss Options in Your Area</li>
+				<li class="list-group-item">Share Recipes and Tips for a Healthy Diet</li>
+				<li class="list-group-item">Expand on...</li>
+			</ul>
+			<p>All while building a community that promotes heathy, affordable meals!</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="modal" id="healthModal">
+	<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title">Track Your Progress towards Eating Healthy</h4>
+		</div>
+		<div class="modal-body">
+			<p>We can provide you tools to:
+			<ul class="list-group">
+				<li class="list-group-item">Plan a healthy diet</li>
+				<li class="list-group-item">Maintain nutritional info</li>
+				<li class="list-group-item">Budget meals within local market prices</li>
+			</ul>
+			<p>All to keep you encouraged along the way towards a healthy lifestyle!</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+	</div>
+	</div>
+</div>
