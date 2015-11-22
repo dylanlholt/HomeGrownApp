@@ -1,0 +1,15 @@
+<h2><%= @recipe.name %> </h2>
+<p><%= @recipe.summary %></p>
+<p>Created by <%= @recipe.chef.username %></p>
+<p>
+  <span class="quiet"><small><%= time_ago_in_words(@recipe.created_at) %> ago</small></span>
+</p>
+
+<hr/>
+
+<div class="well">
+  <p>Description:</p>
+  <p><%= @recipe.description %></p>
+</div>
+
+<%= link_to "Return to List", recipes_path, class: "btn btn-warning btn-md" %>
