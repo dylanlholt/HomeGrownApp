@@ -1,6 +1,7 @@
-<h2><%= @recipe.name %> </h2>
+<%=  render "Shared/page_title", title: @recipe.name %>
 <p><%= @recipe.summary %></p>
 <p>Created by <%= @recipe.chef.username %></p>
+
 <p>
   <span class="quiet"><small><%= time_ago_in_words(@recipe.created_at) %> ago</small></span>
 </p>
@@ -12,4 +13,7 @@
   <p><%= simple_format(@recipe.description) %></p>
 </div>
 
-<%= link_to "Return to List", recipes_path, class: "btn btn-warning btn-md" %>
+<p>
+<%= link_to "Return to List", recipes_path, class: "btn btn-primary btn-md" %>
+<%= link_to "Edit Recipe", edit_recipe_path(@recipe), class:"btn btn-warning btn-md" %>
+</p>

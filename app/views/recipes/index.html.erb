@@ -1,4 +1,6 @@
-<h1>All Recipes</h1>
+<%=  render "Shared/page_title", title: "All Recipes" %>
+<h1><%= link_to "New Recipe", new_recipe_path, class: "btn btn-primary" %></h1>
+
 <hr/>
 
 <% @recipes.each do |recipe| %>
