@@ -9,7 +9,7 @@
 
 <div class="well">
   <p>Description:</p>
-  <p><%= @recipe.description %></p>
+  <p><%= simple_format(@recipe.description) %></p>
 </div>
 
 <%= link_to "Return to List", recipes_path, class: "btn btn-warning btn-md" %>
