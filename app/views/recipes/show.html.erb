@@ -1,4 +1,7 @@
 <%=  render "Shared/page_title", title: @recipe.name %>
+
+<h1><%= image_tag(@recipe.picture.url, class:"gravatar") if @recipe.picture? %></h1>
+
 <p><%= @recipe.summary %></p>
 <p>Created by <%= @recipe.chef.username %></p>
 

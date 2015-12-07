@@ -15,11 +15,18 @@
     </div>
     
     <div class="col-lg-8 well">
-      <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
-      <p><%= recipe.summary %></p>
-      <p>
-        <span class="quiet"><small><%= time_ago_in_words(recipe.created_at) %> ago</small></span>
-      </p>
+      <div class="pull-left">
+        <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+        <p><%= recipe.summary %></p>
+        <p>
+          <span class="quiet"><small><%= time_ago_in_words(recipe.created_at) %> ago</small></span>
+        </p>
+      </div>
+      
+      <div>
+      <%= image_tag(recipe.picture.url, size:"250x150", class:"gravatar pull-right") if recipe.picture? %>
+      </div>
+      
     </div>
     
   </div>
