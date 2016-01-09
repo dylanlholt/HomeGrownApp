@@ -3,7 +3,7 @@
 <h1><%= image_tag(@recipe.picture.url, class:"gravatar") if @recipe.picture? %></h1>
 
 <p><%= @recipe.summary %></p>
-<p>Created by <%= @recipe.chef.username %></p>
+<p>Created by <%= link_to @recipe.chef.username, chef_path(@recipe.path)%></p>
 
 <p>
   <span class="quiet"><small><%= time_ago_in_words(@recipe.created_at) %> ago</small></span>
@@ -14,6 +14,14 @@
 <div class="well">
   <p>Description:</p>
   <p><%= simple_format(@recipe.description) %></p>
+  <div class="pull-right">
+    <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
+      <i class="glyphicon glyphicon-thumbs-up"></i>
+    <% end %> &nbsp <%= @recipe.thumbs_up_total %> &nbsp
+    <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
+      <i class="glyphicon glyphicon-thumbs-down"></i> 
+    <% end %> &nbsp <%= @recipe.thumbs_down_total %>
+  </div>
 </div>
 
 <p>

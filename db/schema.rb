@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206215654) do
+ActiveRecord::Schema.define(version: 20160102233722) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "username"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.boolean  "like"
+    t.integer  "chef_id"
+    t.integer  "recipe_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "recipes", force: :cascade do |t|
