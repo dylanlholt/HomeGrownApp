@@ -3,7 +3,7 @@
 <h1><%= image_tag(@recipe.picture.url, class:"gravatar") if @recipe.picture? %></h1>
 
 <p><%= @recipe.summary %></p>
-<p>Created by <%= link_to @recipe.chef.username, chef_path(@recipe.path)%></p>
+<p>Created by <%= link_to @recipe.chef.username, chef_path(@recipe.chef)%></p>
 
 <p>
   <span class="quiet"><small><%= time_ago_in_words(@recipe.created_at) %> ago</small></span>
@@ -26,5 +26,7 @@
 
 <p>
 <%= link_to "Return to List", recipes_path, class: "btn btn-primary btn-md" %>
-<%= link_to "Edit Recipe", edit_recipe_path(@recipe), class:"btn btn-warning btn-md" %>
+<% if logged_in? && current_user == @recipe.chef %>
+  <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class:"btn btn-warning btn-md" %>
+<% end %>
 </p>

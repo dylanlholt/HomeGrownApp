@@ -10,11 +10,15 @@
     </div>
 </div>
 
+<% if logged_in? && @chef == current_user %>
+  <h1><%= link_to "Edit Chef", edit_chef_path(@chef), class: "btn btn-warning" %></h1>
+<% end %>
+
 <hr/>
 
 <% @recipes.each do |recipe| %>
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 well">
+        <div class="col-md-10 col-md-offset-1 well">
           <div class="pull-left">
             <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
             <p><%= recipe.summary %></p>

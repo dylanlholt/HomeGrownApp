@@ -1,5 +1,8 @@
 <%=  render "Shared/page_title", title: "All Recipes" %>
-<h1><%= link_to "New Recipe", new_recipe_path, class: "btn btn-primary" %></h1>
+
+<% if logged_in? %>
+  <h1><%= link_to "New Recipe", new_recipe_path, class: "btn btn-primary" %></h1>
+<% end %>
 
 <hr/>
 
@@ -9,12 +12,12 @@
     
     <div class="col-md-2">
       <section class="chef_info center">
-        <%= link_to (gravatar_for recipe.chef, size:100), chef_path(recipe.chef) %>
-        <h5>Chef Name: <%= recipe.chef.username %></h5>
+        <%= link_to gravatar_for(recipe.chef, size:100), chef_path(recipe.chef) %>
+        <h5>Chef Name:<br/><%= recipe.chef.username %></h5>
       </section>
     </div>
     
-    <div class="col-lg-8 well">
+    <div class="col-md-9 well">
       <div class="pull-left">
         <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
         <p><%= recipe.summary %></p>
